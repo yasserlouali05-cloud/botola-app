@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>المباريات</title>
+
+<style>
+body{
+    background:#111827;
+    color:white;
+    font-family:Arial;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#8ef58e;
+}
+
+.match{
+    background:#1f2937;
+    width:80%;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+}
+
+.match:hover{
+    background:#374151;
+}
+
+a{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    color:#8ef58e;
+    text-decoration:none;
+    font-size:20px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>⚽ مباريات البطولة الاحترافية</h1>
+
+<div id="matches-container"></div>
+
+<a href="../index.html">⬅ العودة للرئيسية</a>
+
+<script>
+const matches = [
+{
+home:"الوداد الرياضي",
+away:"اتحاد طنجة",
+score:"2 - 0",
+date:"2026-04-01"
+},
+{
+home:"الرجاء الرياضي",
+away:"المغرب الفاسي",
+score:"1 - 0",
+date:"2026-04-02"
+},
+{
+home:"نهضة بركان",
+away:"الجيش الملكي",
+score:"3 - 1",
+date:"2026-04-03"
+},
+{
+home:"حسنية أكادير",
+away:"أولمبيك آسفي",
+score:"2 - 2",
+date:"2026-04-04"
+},
+{
+home:"شباب السوالم",
+away:"الفتح الرباطي",
+score:"1 - 0",
+date:"2026-04-05"
+},
+{
+home:"اتحاد تواركة",
+away:"الدفاع الحسني الجديدي",
+score:"2 - 1",
+date:"2026-04-06"
+},
+{
+home:"المغرب التطواني",
+away:"نهضة الزمامرة",
+score:"1 - 1",
+date:"2026-04-07"
+},
+{
+home:"الرجاء الرياضي",
+away:"الوداد الرياضي",
+score:"2 - 2",
+date:"2026-04-08"
+},
+{
+home:"الجيش الملكي",
+away:"حسنية أكادير",
+score:"3 - 0",
+date:"2026-04-09"
+},
+{
+home:"نهضة بركان",
+away:"شباب السوالم",
+score:"4 - 1",
+date:"2026-04-10"
+}
+];
+
+const container = document.getElementById("matches-container");
+
+matches.forEach(match => {
+container.innerHTML += `
+<div class="match">
+<h3>${match.home} VS ${match.away}</h3>
+<p>📅 ${match.date}</p>
+<p>⚽ ${match.score}</p>
+</div>
+`;
+});
+</script>
+
+</body>
+</html>

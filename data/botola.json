@@ -1,0 +1,18 @@
+[
+  {"rank":1,"team":"MAS","p":22,"diff":"+19","pts":44,"logo":"../logos/MAS_de_Fes.png"},
+  {"rank":2,"team":"Raja CA","p":21,"diff":"+18","pts":42,"logo":"../logos/morocco_raja-ca_3000x3000.football-logos.cc.png"},
+  {"rank":3,"team":"AS FAR","p":21,"diff":"+20","pts":41,"logo":"../logos/AS-FAR-logo.png"},
+  {"rank":4,"team":"WAC","p":21,"diff":"+15","pts":40,"logo":"../logos/Logo_Wydad_Athletic_Club.png"},
+  {"rank":5,"team":"RS Berkane","p":21,"diff":"+12","pts":40,"logo":"../logos/LogoRSB2018.png"},
+  {"rank":6,"team":"DHJ","p":21,"diff":"-2","pts":30,"logo":"../logos/dhj.png"},
+  {"rank":7,"team":"CODM","p":22,"diff":"-5","pts":30,"logo":"../logos/morocco_cod-meknes_3000x3000.football-logos.cc.png"},
+  {"rank":8,"team":"KACM","p":22,"diff":"+2","pts":27,"logo":"../logos/kacm.png"},
+  {"rank":9,"team":"FUS Rabat","p":21,"diff":"-2","pts":27,"logo":"../logos/morocco_fus-rabat_3000x3000.football-logos.cc.png"},
+  {"rank":10,"team":"Renaissance Zemamra","p":22,"diff":"-8","pts":24,"logo":"../logos/rca-zemamra-footballlogos-org.png"},
+  {"rank":11,"team":"Ittihad Tanger","p":21,"diff":"-6","pts":23,"logo":"../logos/morocco_ir-tanger_3000x3000.football-logos.cc.png"},
+  {"rank":12,"team":"HUSA","p":21,"diff":"-12","pts":20,"logo":"../logos/morocco_hassania-agadir_3000x3000.football-logos.cc.png"},
+  {"rank":13,"team":"Olympique Dcheira","p":22,"diff":"-14","pts":18,"logo":"../logos/morocco_olympique-dcheira_3000x3000.football-logos.cc.png"},
+  {"rank":14,"team":"USYM","p":22,"diff":"-11","pts":17,"logo":"../logos/morocco_union-yacoub-el-mansour_3000x3000.football-logos.cc.png"},
+  {"rank":15,"team":"Union Touarga","p":22,"diff":"-11","pts":17,"logo":"../logos/morocco_uts-rabat_3000x3000.football-logos.cc.png"},
+  {"rank":16,"team":"OC Safi","p":22,"diff":"-15","pts":15,"logo":"../logos/morocco_olympic-club-safi_3000x3000.football-logos.cc.png"}
+]

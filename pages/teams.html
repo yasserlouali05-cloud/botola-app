@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>الفرق المغربية</title>
+
+<style>
+body{
+    font-family:Arial;
+    text-align:center;
+}
+
+.team{
+    border:1px solid #ddd;
+    margin:10px auto;
+    padding:10px;
+    width:300px;
+}
+
+img{
+    width:80px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>الفرق المغربية</h1>
+
+<div id="teams"></div>
+
+<script>
+
+fetch("http://localhost:3000/teams")
+.then(response => response.json())
+.then(data => {
+
+    let html = "";
+
+    data.teams.forEach(team => {
+
+        html += `
+        <div class="team">
+            <img src="${team.strBadge}">
+            <h3>${team.strTeam}</h3>
+            <p>${team.strStadium || "غير متوفر"}</p>
+        </div>
+        `;
+
+    });
+
+    document.getElementById("teams").innerHTML = html;
+
+});
+
+</script>
+
+</body>
+</html>

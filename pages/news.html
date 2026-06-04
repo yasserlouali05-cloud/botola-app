@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>آخر الأخبار</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+body{
+    background:#111827;
+    color:white;
+    font-family:Arial;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#8ef58e;
+}
+
+.news-card{
+    background:#1f2937;
+    width:80%;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+}
+
+.news-card:hover{
+    background:#374151;
+}
+</style>
+
+</head>
+<body>
+
+<h1>آخر الأخبار</h1>
+
+<div id="news-container"></div>
+
+<script>
+const news = [
+{
+title:"الوداد الرياضي ينتصر على اتحاد طنجة بثنائية نظيفة",
+date:"2026-04-01"
+},
+{
+title:"الرجاء الرياضي يحقق فوزاً مهماً أمام المغرب الفاسي",
+date:"2026-04-02"
+},
+{
+title:"نهضة بركان تواصل سلسلة النتائج الإيجابية في البطولة",
+date:"2026-04-03"
+},
+{
+title:"الجيش الملكي يقترب من صدارة الترتيب بعد انتصار جديد",
+date:"2026-04-04"
+},
+{
+title:"حسنية أكادير تتعادل مع أولمبيك آسفي في مباراة مثيرة",
+date:"2026-04-05"
+},
+{
+title:"اتحاد تواركة يفاجئ الفتح الرباطي ويحقق ثلاث نقاط ثمينة",
+date:"2026-04-06"
+},
+{
+title:"شباب السوالم يحقق فوزاً مهماً للهروب من مناطق الهبوط",
+date:"2026-04-07"
+},
+{
+title:"المغرب التطواني يستعيد توازنه بفوز مهم داخل الميدان",
+date:"2026-04-08"
+},
+{
+title:"الدفاع الحسني الجديدي يحسم مباراة قوية أمام نهضة الزمامرة",
+date:"2026-04-09"
+},
+{
+title:"الجماهير المغربية تترقب قمة الوداد والرجاء في الجولة المقبلة",
+date:"2026-04-10"
+}
+];
+
+const container = document.getElementById("news-container");
+
+news.forEach(item => {
+container.innerHTML += `
+<div class="news-card">
+    <h3>${item.title}</h3>
+    <p>${item.date}</p>
+</div>
+`;
+});
+</script>
+
+</body>
+</html>

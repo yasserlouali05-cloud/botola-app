@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Botola Pro D1 Inwi</title>
+
+<style>
+
+body{
+    background:#111827;
+    color:white;
+    font-family:Arial,sans-serif;
+    margin:0;
+}
+
+.header{
+    padding:20px;
+    display:flex;
+    justify-content:center;
+}
+
+.badge{
+    background:#8ef58e;
+    color:white;
+    padding:20px 50px;
+    border-radius:15px;
+    font-size:32px;
+    font-weight:bold;
+}
+
+table{
+    width:95%;
+    margin:20px auto;
+    border-collapse:collapse;
+    background:#1f2937;
+}
+
+th{
+    background:#8ef58e;
+    color:white;
+    padding:15px;
+    font-size:22px;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #374151;
+    text-align:center;
+    font-size:18px;
+}
+
+tr:hover{
+    background:#374151;
+}
+
+.team-cell{
+    text-align:left;
+}
+
+.team-logo{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    margin-right:12px;
+    vertical-align:middle;
+}
+.rank-green{
+    background:#22c55e;
+    color:white;
+    padding:6px 12px;
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.rank-blue{
+    background:#3b82f6;
+    color:white;
+    padding:6px 12px;
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.rank-yellow{
+    background:#facc15;
+    color:black;
+    padding:6px 12px;
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.rank-red{
+    background:#ef4444;
+    color:white;
+    padding:6px 12px;
+    border-radius:50%;
+    font-weight:bold;
+}
+
+.best-team{
+    width:90%;
+    margin:40px auto;
+    background:#1f2937;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+}
+
+.best-team h2{
+    color:#8ef58e;
+}
+
+.best-team p{
+    font-size:20px;
+    margin:20px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- إعدادات الموقع -->
+
+<div style="position:fixed;top:15px;right:15px;z-index:999;">
+
+<button onclick="toggleSettings()" style="
+background:#1f2937;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:50%;
+font-size:24px;
+cursor:pointer;
+">
+⚙️
+</button>
+
+<div id="settingsMenu" style="
+display:none;
+position:absolute;
+right:0;
+top:55px;
+background:#1f2937;
+padding:15px;
+border-radius:10px;
+width:220px;
+box-shadow:0 0 10px rgba(0,0,0,.5);
+">
+
+...
+(الكود كامل ديال الإعدادات)
+...
+
+</div>
+
+</div>
+</div>
+
+<!-- إعدادات الموقع -->
+<div style="position:fixed;top:15px;right:15px;z-index:999;">
+<button onclick="toggleSettings()">⚙️</button>
+</div>
+
+<div class="header">
+    <div class="badge">
+        Botola Pro D1 Inwi
+    </div>
+</div>
+<div class="header">
+    <div class="badge">
+        Botola Pro D1 Inwi
+    </div>
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>#</th>
+<th>Team</th>
+<th>P</th>
+<th>DIFF</th>
+<th>PTS</th>
+</thead>
+
+<tbody id="standings-body">
+</tbody>
+</table>
+
+<!-- الصق Rules هنا -->
+
+<div style="
+width:95%;
+margin:20px auto;
+background:#1f2937;
+padding:20px;
+border-radius:10px;
+">
+
+<h3>Rules</h3>
+
+<p>🟢 1 - 2 : Champions League</p>
+<p>🔵 3 : CAF Confederation Cup</p>
+<p>🟡 13 - 14 : Relegation Playoffs</p>
+<p>🔴 15 - 16 : Relegation</p>
+
+<hr>
+
+<p><b>P</b> = Matches Played</p>
+<p><b>DIFF</b> = Goal Difference</p>
+<p><b>PTS</b> = Points</p>
+
+</div>
+
+<h2 style="text-align:center;color:#8ef58e;margin-top:40px;">
+🏆 أفضل تشكيلة في البطولة الوطنية
+</h2>
+
+<div onclick="toggleTeam()" style="
+text-align:center;
+font-size:35px;
+cursor:pointer;
+color:#8ef58e;
+margin:20px;
+">
+▼ عرض أفضل تشكيلة
+</div>
+▼
+</div>
+
+<div id="bestTeam" style="
+display:none;
+width:700px;
+height:900px;
+margin:20px auto;
+background:url('../logos/field.png');
+background-size:cover;
+background-position:center;
+border:4px solid white;
+border-radius:15px;
+position:relative;
+">
+
+<!-- المهاجم -->
+<div style="position:absolute;top:60px;left:250px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/morocco_irt-tanger_3000x3000.football-logos.cc.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.7 Y. Najari
+</div>
+
+<!-- الجناحين -->
+<div style="position:absolute;top:180px;left:80px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/morocco_uts-rabat_3000x3000.football-logos.cc.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.8 H. Boussefiane
+</div>
+
+<div style="position:absolute;top:180px;left:450px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/LogoRSB2018.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.6 P. Bassène
+</div>
+
+<!-- الوسط -->
+<div style="position:absolute;top:340px;left:20px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/morocco_irt-tanger_3000x3000.football-logos.cc.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.5 S. Errahouli
+</div>
+
+<div style="position:absolute;top:340px;left:190px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/Logo_Wydad_Athletic_Club.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.7 G. Claude
+</div>
+
+<div style="position:absolute;top:340px;left:370px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/LogoRSB2018.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.6 Y. Labhiri
+</div>
+
+<div style="position:absolute;top:340px;left:540px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/Logo_Wydad_Athletic_Club.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 9.9 H. Ziyech
+</div>
+
+<!-- الدفاع -->
+<div style="position:absolute;top:560px;left:70px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/morocco_olympic-club-safi_3000x3000.football-logos.cc.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.5 B. Giaddarine
+</div>
+
+<div style="position:absolute;top:560px;left:260px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/AS-FAR-logo.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.6 Y. Fatine
+</div>
+
+<div style="position:absolute;top:560px;left:470px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/morocco_olympic-club-safi_3000x3000.football-logos.cc.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.6 B. E. Ouadghiri
+</div>
+
+<!-- الحارس -->
+<div style="position:absolute;top:760px;left:250px;background:white;color:black;padding:8px 12px;border-radius:20px;font-weight:bold;">
+<img src="../logos/morocco_uts-rabat_3000x3000.football-logos.cc.png" style="width:20px;height:20px;vertical-align:middle;margin-right:5px;">
+⭐ 7.5 H. Boualainine
+</div>
+<script>
+function toggleTeam() {
+  const team = document.getElementById("bestTeam");
+
+  if (team.style.display === "none") {
+    team.style.display = "block";
+  } else {
+    team.style.display = "none";
+  }
+}
+
+</script>
+
+<script src="classement.js"></script>
+
+<script>
+function toggleSettings() {
+  const menu = document.getElementById("settingsMenu");
+  menu.style.display =
+    menu.style.display === "block" ? "none" : "block";
+}
+
+function toggleLanguages() {
+  const lang = document.getElementById("languages");
+  lang.style.display =
+    lang.style.display === "block" ? "none" : "block";
+}
+
+function toggleTheme() {
+  const theme = document.getElementById("themeMenu");
+  theme.style.display =
+    theme.style.display === "block" ? "none" : "block";
+}
+
+function setDarkMode() {
+  document.body.style.background = "#111827";
+  document.body.style.color = "white";
+}
+
+function setLightMode() {
+  document.body.style.background = "#ffffff";
+  document.body.style.color = "black";
+}
+</script>
+
+</body>
+<div style="position:fixed;top:15px;right:15px;z-index:999;">
+<button onclick="toggleSettings()">⚙️</button>
+</div>
+</html>
